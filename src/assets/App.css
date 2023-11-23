@@ -1,0 +1,101 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1F1F1F;
+}
+
+.range-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.value-container   {
+  display: flex;
+  justify-content: space-between;
+  color: #FFFFFF;
+}
+
+.value-section{
+  background-color: #6A6A6A;
+  min-width: 50px;
+  height: 23px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-family: Inert, sans-serif;
+  padding: 0 2px;
+  transition: 0.3s;
+}
+
+.value {
+  border: none;
+  background: none;
+  width: 30px;
+  color: #FFFFFF;
+}
+.value:focus{
+  outline: none;
+}
+.range-section{
+  position: relative;
+  width: 200px;
+  
+}
+.slider {
+  position: absolute;
+  width: 200px;
+  height: 12px;
+  border-radius: 5px;
+  background-color: #FFECBB;
+  overflow: hidden;
+}
+
+.slider .progres {
+  height: 12px;
+  max-width: 100%;
+  left: 25%;
+  right: 10%;
+  position: absolute;
+  border-radius: 5px;
+  background-color: #FDC840;
+}
+
+.ranges {
+  width: 200px;
+  position: relative;
+}
+
+.range {
+  position: absolute;
+  top: -6px;
+  width: 100%;
+  -webkit-appearance: none;
+  background: none;
+  pointer-events: none;
+  margin: 0;
+}
+
+input[type='range']::-webkit-slider-thumb{
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  background: white;
+  pointer-events: auto;
+  
+}
+input[type='range']::-moz-range-thumb{
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  border: none;
+  -moz-appearance: none;
+  background: white;
+  pointer-events: auto;
+  
+}
