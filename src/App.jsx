@@ -41,7 +41,10 @@ function App() {
       if (parseInt(value) == value) {
         setMaxInputValue(parseInt(value))
         if (parseInt(value) > parseInt(minRangeValue) + parseInt(maxPrice) / 10) setMaxRangeValue(value)
-        if (value > parseInt(maxPrice)) setMaxRangeValue(maxPrice)
+        if (parseInt(value) > parseInt(maxPrice)){
+          setMaxRangeValue(maxPrice)
+          setMaxInputValue(maxPrice)
+        } 
       }
     }
   }
