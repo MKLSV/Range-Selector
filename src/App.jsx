@@ -24,7 +24,6 @@ function App() {
       if(parseInt(value) == value && parseInt(value) < parseInt(maxPrice)){
         setMinInputValue(parseInt(value))
         if (parseInt(value) < parseInt(maxRangeValue) - parseInt(maxPrice) / 10) setMinRangeValue(parseInt(value))
-        if (!value) setMinValue('0')
       }
     }
   }
