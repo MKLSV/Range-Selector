@@ -21,7 +21,7 @@ function App() {
     }
     else {
       if (value === '') setMinInputValue(0)
-      if (value === '-' || parseInt(value) < 0) setMinInputValue(0)
+      if (parseInt(value) < 0) setMinInputValue(0)
       if(parseInt(value) == value && parseInt(value) < parseInt(maxPrice)){
         setMinInputValue(parseInt(value))
         if (parseInt(value) < parseInt(maxRangeValue) - parseInt(maxPrice) / 10) setMinRangeValue(parseInt(value))
@@ -39,7 +39,7 @@ function App() {
     }
     else {
       if (value === '') setMaxInputValue(0)
-      if (value === '-' || parseInt(value) < 0) setMaxInputValue(0)
+      if (parseInt(value) < 0) setMaxInputValue(0)
       if (parseInt(value) == value) {
         setMaxInputValue(parseInt(value))
         if (parseInt(value) > parseInt(minRangeValue) + parseInt(maxPrice) / 10) setMaxRangeValue(value)
